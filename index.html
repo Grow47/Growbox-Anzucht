@@ -72,6 +72,10 @@
                 sidebar.classList.remove("close");
             };
 
+            sidebarCloseBtn.forEach(btn => {
+                btn.addEventListener("click", hideSidebar);
+            }
+                                    
             sidebarOpenBtn.addEventListener("click", showSidebar);
             logoOpenidebar.addEventListener("click", showSidebar);
         });
