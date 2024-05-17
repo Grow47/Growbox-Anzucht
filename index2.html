@@ -39,7 +39,6 @@
                 </div>
             </ul>
         </div>
-        <button class="close-button" onclick="toggleMenu()">schließen</button>  
     </div>
 
     <nav class="navbar flex">
@@ -59,14 +58,27 @@
     </footer>
 
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('side-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
+        const sidebar = document.querySelector(".sidebar");
+        const sidebarOpenBtn = document.querySelector("#sidebar-open");
+        const sidebarCloseBtn = document.querySelector("#sidebar-close");
+        const sidebarLockBtn = document.querySelector("#lock.icon");
+
+        const toggleLock = () => {
+            sidebar.classList.toggle("locked");
+            if(!sidebar.classList.container("locked"){
+                sidebar.classList.add("hoverable");
+                sidebarLockBtn.classList.replace("bx-lock-alt", "bx-lock-open-alt");
             } else {
-                menu.style.display = 'block';
+                sidebar.classList.remove("hoverable");
+                sidebarLockBtn.classList.replace("bx-lock-open-alt", "bx-lock-alt");
             }
         }
+
+        const hideSidebar = {} => {
+            if (sidebar.classList.contains("hoverable")) {
+                sidebar.classList.add("close");
+            }
+        };
     </script>
 
 </body>
