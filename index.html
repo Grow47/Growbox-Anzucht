@@ -9,19 +9,17 @@
     
 <body>
     <nav class="sidebar locked">
-      <div class="logo-items flex">
-        <span class="nav_image">
-            <img src="Grow_Logo.jpeg" alt="Weed" />
-        </span>   
-        <span class="logo_name">Luca`s Growboxen</span>    
-        <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
-        <i class="bx bx-x" id="sidebar-close"></i>
-     </div>
-    
+        <div class="logo-items flex">
+            <span class="nav_image">
+                <img src="Grow_Logo.jpeg" alt="Weed" />
+            </span>   
+            <span class="logo_name">Luca`s Growboxen</span>    
+            <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
+            <i class="bx bx-x" id="sidebar-close"></i>
+        </div>
         
-    <div class="menu-container">
-        <div class="menu_items">
-            <ul class="menu_item">
+        <div class="menu-container">
+            <div class="menu_items">
                 <div class="menu_title flex">
                     <span class="title">Growboxen</span>
                     <span class="line"></span>
@@ -38,20 +36,18 @@
                 <ul class="submenu">
                     <li><a href="Updates.html">Updates</a></li>
                 </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
     <main>
         <h1>Startseite</h1>
         <p>Hier werden demnächst meine Growboxen ausgelesen!</p>
 
-          <nav class="navbar flex">
+        <nav class="navbar flex">
             <i class="bx bx-menu" id="sidebar-open"></i>
             <input type="text" placeholder="Search..." class="search_box" />
-          </nav>
-        
-        
+        </nav>
     </main>
     <footer>
         <p>&copy; Meine Growseite 2024</p>
@@ -61,11 +57,11 @@
         const sidebar = document.querySelector(".sidebar");
         const sidebarOpenBtn = document.querySelector("#sidebar-open");
         const sidebarCloseBtn = document.querySelector("#sidebar-close");
-        const sidebarLockBtn = document.querySelector("#lock.icon");
+        const sidebarLockBtn = document.querySelector("#lock-icon");
 
         const toggleLock = () => {
             sidebar.classList.toggle("locked");
-            if(!sidebar.classList.container("locked"){
+            if (!sidebar.classList.contains("locked")) {
                 sidebar.classList.add("hoverable");
                 sidebarLockBtn.classList.replace("bx-lock-alt", "bx-lock-open-alt");
             } else {
@@ -81,12 +77,10 @@
         const showSidebar = () => {
             sidebar.classList.remove("close");
         };
-            
 
         sidebarLockBtn.addEventListener("click", toggleLock);
         sidebarCloseBtn.addEventListener("click", hideSidebar);
         sidebarOpenBtn.addEventListener("click", showSidebar);
     </script>
-
 </body>
 </html>
