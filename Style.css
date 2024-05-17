@@ -6,10 +6,6 @@
     font-family: "Poppins", sans-serif; 
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,17 +15,8 @@ body {
     flex-direction: column;
 }
 
-header {
-    background-color: #35b81c;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.permanent-nav {
-    background-color: #35b81c;
+.blue-bar {
+    background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -38,7 +25,6 @@ header {
 }
 
 .logo-img {
-    cursor: pointer;
     max-height: 40px;
 }
 
@@ -60,6 +46,7 @@ nav {
 
 main {
     flex: 1;
+    padding: 20px;
 }
 
 footer {
@@ -68,11 +55,6 @@ footer {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-}
-
-.flex {
-    display: flex; 
-    align-items: center; 
 }
 
 /* Seitenleiste */
@@ -97,60 +79,46 @@ footer {
     left: -250px;
 }
 
-.sidebar .logo-items {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-}
-
-.sidebar .logo-items i {
-    color: #ecf0f1;
-}
-
-/* Menücontainer */
-.menu-container {
+.sidebar .menu-container {
     padding: 20px;
     box-sizing: border-box;
 }
 
-.menu-container .menu_items {
+.sidebar .menu-container .menu_items {
     list-style: none;
     padding: 0;
 }
 
-.menu-container .menu_items .menu_title {
+.sidebar .menu-container .menu_items .menu_title {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-.menu-container .menu_items .menu_title .title {
+.sidebar .menu-container .menu_items .menu_title .title {
     font-size: 16px;
     font-weight: bold;
 }
 
-.menu-container .menu_items .menu_title .line {
+.sidebar .menu-container .menu_items .menu_title .line {
     flex-grow: 1;
     height: 1px;
     background-color: #bdc3c7; /* Beispiel-Farbe */
     margin-left: 10px;
 }
 
-.menu-container .menu_items .submenu {
+.sidebar .menu-container .menu_items .submenu {
     list-style: none;
     padding: 0;
     margin-top: 10px;
 }
 
-.menu-container .menu_items .submenu li {
+.sidebar .menu-container .menu_items .submenu li {
     margin-bottom: 5px;
 }
 
-.menu-container .menu_items .submenu li a {
-    text-decoration: none;
-    color: #34495e; /* Beispiel-Farbe */
-}
+.sidebar .menu-container .menu_items .submenu li a {
+   
 
 
