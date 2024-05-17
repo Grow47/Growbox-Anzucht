@@ -57,8 +57,12 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    z-index: 1000;
     box-sizing: border-box;
     transition: transform 0.3s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+    justify-content: space-between;
 }
 
 .sidebar.locked {
