@@ -15,7 +15,7 @@ body {
     flex-direction: column;
 }
 
-.permanent-nav {
+.blue-bar {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -24,28 +24,45 @@ body {
     align-items: center;
 }
 
-.permanent-nav .logo-img {
+.logo-img {
     max-height: 40px;
 }
 
-.nav-items {
+.navbar {
     display: flex;
     align-items: center;
 }
 
-.nav-items .page-name {
-    margin-right: 10px;
+.navbar input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 10px;
 }
 
-.nav-items i {
-    cursor: pointer;
+nav {
+    display: none;
 }
 
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Seitenleiste */
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: #2c3e50; 
-    position: fixed; 
+    background-color: #2c3e50; /* Beispiel-Farbe */
+    position: fixed; /* Fixiert die Seitenleiste */
     top: 0;
     left: -250px;
     display: flex;
@@ -58,61 +75,48 @@ body {
     overflow-y: auto;
 }
 
-.sidebar-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.sidebar.close {
+    left: -250px;
 }
 
-.sidebar-header .logo-img {
-    max-height: 40px;
-}
-
-.sidebar-header .page-name {
-    margin-left: 10px;
-}
-
-.menu-container {
+.sidebar .menu-container {
     padding: 20px;
     box-sizing: border-box;
 }
 
-.menu-container .menu_items {
+.sidebar .menu-container .menu_items {
     list-style: none;
     padding: 0;
 }
 
-.menu-container .menu_items .menu_title {
+.sidebar .menu-container .menu_items .menu_title {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-.menu-container .menu_items .menu_title .title {
+.sidebar .menu-container .menu_items .menu_title .title {
     font-size: 16px;
     font-weight: bold;
 }
 
-.menu-container .menu_items .menu_title .line {
+.sidebar .menu-container .menu_items .menu_title .line {
     flex-grow: 1;
     height: 1px;
-    background-color: #bdc3c7;
+    background-color: #bdc3c7; /* Beispiel-Farbe */
     margin-left: 10px;
 }
 
-.menu-container .menu_items .submenu {
+.sidebar .menu-container .menu_items .submenu {
     list-style: none;
     padding: 0;
     margin-top: 10px;
 }
 
-.menu-container .menu_items .submenu li {
+.sidebar .menu-container .menu_items .submenu li {
     margin-bottom: 5px;
 }
 
-.menu-container .menu_items .submenu li a {
-    text-decoration: none;
-    color: #34495e;
-}
+.sidebar .menu-container .menu_items .submenu li a {
+   
