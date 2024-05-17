@@ -6,6 +6,10 @@
     font-family: "Poppins", sans-serif; 
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,12 +17,17 @@ body {
     background-color: #eaebea; 
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
 }
 
 header {
     background-color: #35b81c;
     color: #fff;
     padding: 10px 0;
+}
+
+main {
+    flex: 1;
 }
 
 footer {
