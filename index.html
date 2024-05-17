@@ -14,8 +14,7 @@
             <img src="Grow_Logo.jpeg" alt="Weed" class="logo-img">
         </div>
         <div class="nav-items">
-            <span class="page-name">Luca`s Growboxen</span>
-            <i class="bx bx-x" id="sidebar-close"></i>
+            <input type="text" placeholder="Search..." class="search_box" />
         </div>
     </nav>
 
@@ -60,7 +59,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const sidebar = document.querySelector(".sidebar");
-            const sidebarOpenBtn = document.querySelector("#sidebar-open");
+            const sidebarCloseBtn = document.querySelector("#sidebar-close");
             const logoOpenSidebar = document.querySelector("#logo-open-sidebar");
 
             const hideSidebar = () => {
@@ -70,12 +69,10 @@
             const showSidebar = () => {
                 sidebar.classList.remove("close");
             };
-               
-            sidebarOpenBtn.addEventListener("click", showSidebar);
-            logoOpenidebar.addEventListener("click", showSidebar);
+
+            sidebarCloseBtn.addEventListener("click", hideSidebar);
+            logoOpenSidebar.addEventListener("click", showSidebar);
         });
     </script>
 </body>
 </html>
-
- 
