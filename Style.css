@@ -106,10 +106,24 @@ footer {
     overflow-y: auto;
 }
 
+.sidebar.active {
+    left: 0; 
+}
+
 .sidebar.close {
     left: -250px;
 }
 
+.logo {
+    margin-top: 20px; 
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
 .sidebar .menu-container {
     padding: 20px;
     box-sizing: border-box;
