@@ -12,6 +12,7 @@ body {
     padding: 0;
     background-color: #eaebea; 
     min-height: 100vh;
+    display: flex;
 }
 
 header {
@@ -37,11 +38,6 @@ header {
     width: 35px; 
     border-radius: 50%; 
     object-fit: cover;
-}
-
-/* Allgemeine Stile */
-body {
-    display: flex;
 }
 
 /* Seitenleiste */
