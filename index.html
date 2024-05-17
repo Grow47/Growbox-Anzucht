@@ -9,16 +9,19 @@
 </head>
     
 <body>
-    <nav class="sidebar locked">
+    <header class="header">
+        <div class="logo">
+            <img src="Grow_Logo.jpeg" alt="Weed" id="sidebar-open" class="logo-img">
+        </div>
+        <nav class="navbar">
+            <input type="text" placeholder="Search..." class="search_box" />
+        </nav>
+    </header>
+
+    <nav class="sidebar">
         <div class="logo-items flex">
-            <span class="nav_image">
-                <img src="Grow_Logo.jpeg" alt="Weed" />
-            </span>   
-            <span class="logo_name">Luca`s Growboxen</span>    
-            <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
             <i class="bx bx-x" id="sidebar-close"></i>
         </div>
-        
         <div class="menu-container">
             <div class="menu_items">
                 <div class="menu_title flex">
@@ -44,13 +47,6 @@
     <main>
         <h1>Startseite</h1>
         <p>Hier werden demnächst meine Growboxen ausgelesen!</p>
-
-        <nav class="navbar flex">
-            <span class="nav_image">
-                <img src="Grow_Logo.jpeg" alt="Weed" />
-            </span>
-            <input type="text" placeholder="Search..." class="search_box" />
-        </nav>
     </main>
     <footer>
         <p>&copy; Meine Growseite 2024</p>
@@ -58,20 +54,7 @@
 
     <script>
         const sidebar = document.querySelector(".sidebar");
-        const sidebarOpenBtn = document.querySelector("#sidebar-open");
         const sidebarCloseBtn = document.querySelector("#sidebar-close");
-        const sidebarLockBtn = document.querySelector("#lock-icon");
-
-        const toggleLock = () => {
-            sidebar.classList.toggle("lock");
-            if (!sidebar.classList.contains("lock")) {
-                sidebar.classList.add("hoverable");
-                sidebarLockBtn.classList.replace("bx-lock-alt", "bx-lock-open-alt");
-            } else {
-                sidebar.classList.remove("hoverable");
-                sidebarLockBtn.classList.replace("bx-lock-open-alt", "bx-lock-alt");
-            }
-        };
 
         const hideSidebar = () => {
             sidebar.classList.add("close");
@@ -81,9 +64,8 @@
             sidebar.classList.remove("close");
         };
 
-        sidebarLockBtn.addEventListener("click", toggleLock);
         sidebarCloseBtn.addEventListener("click", hideSidebar);
-        sidebarOpenBtn.addEventListener("click", showSidebar);
+        document.querySelector('.logo-img').addEventListener("click", showSidebar);
     </script>
 </body>
 </html>
