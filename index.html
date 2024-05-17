@@ -4,26 +4,27 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Growbox</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.1/css/boxicons.min.css">
 </head>
     
 <body>
-    <nav class="permanent-nav">
+    <div class="blue-bar">
         <div class="logo">
-            <img src="Grow_Logo.jpeg" alt="Weed" class="logo-img">
+            <img src="Grow_Logo.jpeg" alt="Weed" class="logo-img" id="sidebar-open">
         </div>
-        <div class="nav-items">
-            <span class="page-name">Luca`s Growboxen</span>
-            <i class="bx bx-x" id="sidebar-close"></i>
-        </div>
-    </nav>
-
-    <header class="header">
         <nav class="navbar">
             <input type="text" placeholder="Search..." class="search_box" />
         </nav>
-    </header>
+    </div>
+
+    <main>
+        <h1>Startseite</h1>
+        <p>Hier werden demnächst meine Growboxen ausgelesen!</p>
+    </main>
+    <footer>
+        <p>&copy; Meine Growseite 2024</p>
+    </footer>
 
     <nav class="sidebar">
         <div class="logo-items flex">
@@ -51,17 +52,9 @@
         </div>
     </nav>
 
-    <main>
-        <h1>Startseite</h1>
-        <p>Hier werden demnächst meine Growboxen ausgelesen!</p>
-    </main>
-    <footer>
-        <p>&copy; Meine Growseite 2024</p>
-    </footer>
-
     <script>
         const sidebar = document.querySelector(".sidebar");
-        const sidebarCloseBtns = document.querySelectorAll("#sidebar-close");
+        const sidebarCloseBtn = document.querySelector("#sidebar-close");
 
         const hideSidebar = () => {
             sidebar.classList.add("close");
@@ -71,10 +64,7 @@
             sidebar.classList.remove("close");
         };
 
-        sidebarCloseBtns.forEach(btn => {
-            btn.addEventListener("click", hideSidebar);
-        });
-
+        sidebarCloseBtn.addEventListener("click", hideSidebar);
         document.querySelector('.logo-img').addEventListener("click", showSidebar);
     </script>
 </body>
