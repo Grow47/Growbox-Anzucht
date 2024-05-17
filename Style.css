@@ -24,8 +24,11 @@ header {
 footer {
     background-color: #000000;
     color: #fff;
-    text-align: bottom;
+    text-align: center;
     padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
 
 .flex {
