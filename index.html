@@ -65,6 +65,9 @@
             const sidebarCloseBtn = document.querySelector("#sidebar-close");
             const logoOpenSidebar = document.querySelector("#logo-open-sidebar");
 
+            const sidebar = document.getElementById('sidebar');
+            const logo = document.getElementById('logo');
+
             const hideSidebar = () => {
                 sidebar.classList.add("close");
             };
@@ -75,7 +78,13 @@
 
             sidebarCloseBtn.addEventListener("click", hideSidebar);
             logoOpenSidebar.addEventListener("click", showSidebar);
+
+            function openSidebar () {
+                sidebar.classList.toggle("active");
+            }
         });
+
+        logo.addEventListener("click", openSidebar); 
     </script>
 </body>
 </html>
