@@ -23,7 +23,38 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.blue-nav {
+    background-color: #3498db; /* Blaue Hintergrundfarbe */
+    color: #fff; /* Weiße Schriftfarbe */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Innenabstand oben/unten: 10px, Innenabstand links/rechts: 20px */
+}
 
+.blue-nav .logo-img {
+    height: 40px; /* Höhe des Logos anpassen */
+    width: auto; /* Automatische Breitenanpassung */
+}
+
+.blue-nav .page-name {
+    font-size: 18px; /* Schriftgröße für den Seitennamen */
+    font-weight: bold; /* Fettschrift für den Seitennamen */
+}
+
+.blue-nav .search {
+    flex-grow: 1; /* Suchleiste füllt den verfügbaren Platz aus */
+    text-align: right; /* Suchleiste und Text rechtsbündig ausrichten */
+}
+
+.blue-nav .search_box {
+    padding: 5px 10px; /* Innenabstand der Suchleiste anpassen */
+    border-radius: 5px; /* Abrundung der Ecken der Suchleiste */
+    border: none; /* Keine Rahmen um die Suchleiste */
+    background-color: #fff; /* Weiße Hintergrundfarbe für die Suchleiste */
+    color: #333; /* Dunkle Schriftfarbe für die Suchleiste */
+    width: 200px; /* Breite der Suchleiste anpassen */
+}
 .logo-img {
     max-height: 40px;
 }
