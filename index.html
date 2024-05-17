@@ -60,7 +60,6 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const sidebar = document.querySelector(".sidebar");
-            const sidebarCloseBtn = document.querySelectorAll("#sidebar-close");
             const sidebarOpenBtn = document.querySelector("#sidebar-open");
             const logoOpenSidebar = document.querySelector("#logo-open-sidebar");
 
@@ -71,11 +70,7 @@
             const showSidebar = () => {
                 sidebar.classList.remove("close");
             };
-
-            sidebarCloseBtn.forEach(btn => {
-                btn.addEventListener("click", hideSidebar);
-            }
-                                    
+               
             sidebarOpenBtn.addEventListener("click", showSidebar);
             logoOpenidebar.addEventListener("click", showSidebar);
         });
