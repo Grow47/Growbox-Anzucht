@@ -10,7 +10,7 @@
     
 <body>
     <nav class="permanent-nav">
-        <div class="logo">
+        <div class="logo" id="logo-open-sidebar">
             <img src="Grow_Logo.jpeg" alt="Weed" class="logo-img">
         </div>
         <div class="nav-items">
@@ -62,6 +62,7 @@
             const sidebar = document.querySelector(".sidebar");
             const sidebarCloseBtn = document.querySelectorAll("#sidebar-close");
             const sidebarOpenBtn = document.querySelector("#sidebar-open");
+            const logoOpenSidebar = document.querySelector("#logo-open-sidebar");
 
             const hideSidebar = () => {
                 sidebar.classList.add("close");
@@ -70,5 +71,12 @@
             const showSidebar = () => {
                 sidebar.classList.remove("close");
             };
+
+            sidebarOpenBtn.addEventListener("click", showSidebar);
+            logoOpenidebar.addEventListener("click", showSidebar);
+        });
+    </script>
+</body>
+</html>
 
  
