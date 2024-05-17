@@ -6,36 +6,50 @@
     <title>Growbox</title>
     <link rel="stylesheet" href="style.css">
 </head>
+    
 <body>
-    <header>
-        <nav>
-            <a href="index.html"><img src="Grow_Logo.jpeg" alt="Weed" class="icon"></a>
-            <div class="menu-icon"  onclick="toggleMenu()">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-            </div>
-        </nav>
-    </header>
-
-    <div id="side-menu" class="side-menu">
-        <ul>
-            <li><strong>Growboxen</strong></li>
-            <ul class="submenu">
-                <li><a href="Anzucht.html">Anzucht</a></li>
-                <li><a href="Schrank.html">Schrank</a></li>
-                <li><a href="Growbox.html">Growbox</a></li>
-            </ul>
-            <li><strong>Service</strong></li>
-            <ul class="submenu">
-                <li><a href="Updates.html">Updates</a></li>
-            </ul>
-        </ul>
-
-        <button class="close-button" onclick="toggleMenu()">schließen</button>
-         
+    <nav class="sidebar locked">
+      <div class="logo-items flex">
+        <span class="nav_image">
+            <img src="Grow_Logo.jpeg" alt="Weed" />
+        </span>   
+        <span class="logo_name">Luca`s Growboxen</span>    
+        <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
+        <i class=" bx bx-x" id="sidebar-close"></i>
      </div>
+        
+    <div class="menu-container">
+        <div class="menu_items">
+            <ul class="menu_item">
+                <div class="menu_title flex">
+                    <span class="title">Growboxen</span>
+                    <span class="line"></span>
+                     <ul class="submenu">
+                        <li><a href="Anzucht.html">Anzucht</a></li>
+                        <li><a href="Schrank.html">Schrank</a></li>
+                        <li><a href="Growbox.html">Growbox</a></li>
+                    </ul>
+                </div>
+                <div class="menu_title flex">
+                    <span class="title">Service</span>
+                    <span class="line"></span>
+                    <ul class="submenu">
+                        <li><a href="Updates.html">Updates</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <button class="close-button" onclick="toggleMenu()">schließen</button>  
+    </div>
 
+    <nav class="navbar flex">
+        <i class="bx bx-menu" id="sidebar-open"></i>
+        <input type="text" placeholder="Search..." class="search_box" />
+        <span class="nav_image">
+            <img src="Grow_Logo.jpeg" alt="Weed" />
+        </span>  
+    </nav>
+        
     <main>
         <h1>Startseite</h1>
         <p>Hier werden demnächst meine Growboxen ausgelesen!</p>
