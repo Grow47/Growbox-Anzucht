@@ -28,8 +28,18 @@ header {
     align-items: center;
 }
 
+.permanent-nav {
+    background-color: #35b81c;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo-img {
     cursor: pointer;
+    max-height: 40px;
 }
 
 .navbar {
@@ -42,6 +52,10 @@ header {
     border-radius: 5px;
     border: none;
     margin-left: 10px;
+}
+
+nav {
+    display: none;
 }
 
 main {
@@ -91,4 +105,52 @@ footer {
 }
 
 .sidebar .logo-items i {
-    color: #ecf0f1
+    color: #ecf0f1;
+}
+
+/* Menücontainer */
+.menu-container {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.menu-container .menu_items {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-container .menu_items .menu_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu-container .menu_items .menu_title .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-container .menu_items .menu_title .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #bdc3c7; /* Beispiel-Farbe */
+    margin-left: 10px;
+}
+
+.menu-container .menu_items .submenu {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.menu-container .menu_items .submenu li {
+    margin-bottom: 5px;
+}
+
+.menu-container .menu_items .submenu li a {
+    text-decoration: none;
+    color: #34495e; /* Beispiel-Farbe */
+}
+
+
