@@ -9,15 +9,15 @@
 </head>
     
 <body>
-    <div class="blue-bar">
+    <nav class="permanent-nav">
         <div class="logo">
-            <img src="Grow_Logo.jpeg" alt="Weed" class="logo-img" id="sidebar-open">
+            <img src="Grow_Logo.jpeg" alt="Weed" class="logo-img">
         </div>
-        <nav class="navbar">
-            <input type="text" placeholder="Search..." class="search_box" />
-        </nav>
-    </div>
-
+        <div class="nav-items">
+            <span class="page-name">Luca`s Growboxen</span>
+            <i class="bx bx-x" id="sidebar-close"></i>
+        </div>
+    </nav>
 
     <nav class="sidebar">
         <div class="sidebar-header">
@@ -59,25 +59,16 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-    const sidebar = document.querySelector(".sidebar");
-    const sidebarCloseBtn = document.querySelectorAll("#sidebar-close");
-    const sidebarOpenBtn = document.querySelector("#sidebar-open");
+            const sidebar = document.querySelector(".sidebar");
+            const sidebarCloseBtn = document.querySelectorAll("#sidebar-close");
+            const sidebarOpenBtn = document.querySelector("#sidebar-open");
 
-    const hideSidebar = () => {
-        sidebar.classList.add("close");
-    };
+            const hideSidebar = () => {
+                sidebar.classList.add("close");
+            };
 
-    const showSidebar = () => {
-        sidebar.classList.remove("close");
-    };
+            const showSidebar = () => {
+                sidebar.classList.remove("close");
+            };
 
-    sidebarCloseBtn.forEach(btn => {
-        btn.addEventListener("click", hideSidebar);
-    });
-
-    sidebarOpenBtn.addEventListener("click", showSidebar);
-});
-
-    </script>
-</body>
-</html>
+ 
