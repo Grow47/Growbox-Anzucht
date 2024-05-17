@@ -63,8 +63,8 @@
         const sidebarLockBtn = document.querySelector("#lock-icon");
 
         const toggleLock = () => {
-            sidebar.classList.toggle("open");
-            if (!sidebar.classList.contains("open")) {
+            sidebar.classList.toggle("lock");
+            if (!sidebar.classList.contains("lock")) {
                 sidebar.classList.add("hoverable");
                 sidebarLockBtn.classList.replace("bx-lock-alt", "bx-lock-open-alt");
             } else {
