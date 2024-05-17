@@ -9,6 +9,16 @@
 </head>
     
 <body>
+    <nav class="permanent-nav">
+        <div class="logo">
+            <img src="Grow_Logo.jpeg" alt="Weed" class="logo-img">
+        </div>
+        <div class="nav-items">
+            <span class="page-name">Luca`s Growboxen</span>
+            <i class="bx bx-x" id="sidebar-close"></i>
+        </div>
+    </nav>
+
     <header class="header">
         <div class="logo">
             <img src="Grow_Logo.jpeg" alt="Weed" id="sidebar-open" class="logo-img">
@@ -54,7 +64,7 @@
 
     <script>
         const sidebar = document.querySelector(".sidebar");
-        const sidebarCloseBtn = document.querySelector("#sidebar-close");
+        const sidebarCloseBtns = document.querySelectorAll("#sidebar-close");
 
         const hideSidebar = () => {
             sidebar.classList.add("close");
@@ -64,7 +74,10 @@
             sidebar.classList.remove("close");
         };
 
-        sidebarCloseBtn.addEventListener("click", hideSidebar);
+        sidebarCloseBtns.forEach(btn => {
+            btn.addEventListener("click", hideSidebar);
+        });
+
         document.querySelector('.logo-img').addEventListener("click", showSidebar);
     </script>
 </body>
